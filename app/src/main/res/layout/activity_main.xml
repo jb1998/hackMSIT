@@ -1,99 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+android:background="@drawable/back"
 
     tools:context="com.developer.jatin.hackmsit.MainActivity"
-    tools:layout_editor_absoluteY="81dp">
-
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"></FrameLayout>
+ >
 
     <EditText
         android:id="@+id/editText3"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
-        android:layout_marginBottom="14dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginStart="67dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+
+        android:layout_above="@+id/imageButton"
+        android:layout_alignStart="@+id/editText2"
+        android:layout_marginBottom="12dp"
         android:background="#ffffff"
         android:gravity="center"
         android:hint="Aadhar number"
-        android:inputType="number"
-        android:textColor="#000"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        android:textColor="#000" />
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="0dp"
+        android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="22dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginStart="67dp"
+
+        android:layout_above="@+id/editText3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
         android:background="#ffffff"
         android:gravity="center"
         android:hint="Enter Name"
-        android:textColor="#000"
-        app:layout_constraintBottom_toTopOf="@+id/editText3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        android:textColor="#000" />
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="80dp"
-        android:layout_height="113dp"
+        android:layout_height="80dp"
 
-        android:layout_marginBottom="2dp"
-        android:background="@drawable/click"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/click" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-
-        android:layout_marginBottom="149dp"
-        android:layout_marginEnd="42dp"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="44dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.sunfusheng.marqueeview.MarqueeView
-            android:id="@+id/marquee"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            app:mvAnimDuration="500"
-            app:mvInterval="1500"
-            app:mvSingleLine="true"
-            app:mvTextColor="#ffffff"
-            app:mvTextSize="35sp">
-
-        </com.sunfusheng.marqueeview.MarqueeView>
-    </LinearLayout>
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

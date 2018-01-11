@@ -14,24 +14,24 @@ import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
-    ImageView left,right;
-    MarqueeView marqueeView;
+//    ImageView left,right;
+//    MarqueeView marqueeView;
    ImageButton click;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
-        getSupportActionBar().hide();
+
 
 
          click=(ImageButton)findViewById(R.id.imageButton);
-        marqueeView=(MarqueeView)findViewById(R.id.marquee);
-        ArrayList<String> arr=new ArrayList<>();
-        arr.add("Glad..");
-        arr.add("You are here !!");
-        arr.add("Login Below");
-        marqueeView.startWithList(arr);
+//        marqueeView=(MarqueeView)findViewById(R.id.marquee);
+//        ArrayList<String> arr=new ArrayList<>();
+//        arr.add("Glad..");
+//        arr.add("You are here !!");
+//        arr.add("Login Below");
+//        marqueeView.startWithList(arr);
 
      click.setOnClickListener(new View.OnClickListener() {
          @Override

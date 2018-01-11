@@ -1,5 +1,7 @@
 package com.developer.jatin.hackmsit;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,7 +17,7 @@ import android.view.MenuItem;
 
 public class Maintry extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,19 +81,32 @@ public class Maintry extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+ if (id == R.id.schemes) {
+     toolbar.setTitle("Schemes");
+//     toolbar.setBackgroundColor(Color.parseColor("#0084a8"));
+     case1 blankFragment=new case1();
+     android.app.FragmentManager fragmentManager=getFragmentManager();
+     fragmentManager.beginTransaction().replace(R.id.app_bar,blankFragment,blankFragment.getTag()).commit();
+        } else if (id == R.id.form) {
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+     toolbar.setTitle("Form");
+//     toolbar.setBackgroundColor(Color.parseColor("#0084a8"));
+     Location blankFragment=new Location();
+     android.app.FragmentManager fragmentManager=getFragmentManager();
+     fragmentManager.beginTransaction().replace(R.id.app_bar,blankFragment,blankFragment.getTag()).commit();
+        } else if (id == R.id.appliedschemes) {
 
-        } else if (id == R.id.nav_slideshow) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.locations) {
 
-        } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.share) {
 
+     Intent sendIntent = new Intent();
+     sendIntent.setAction(Intent.ACTION_SEND);
+     sendIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.share_message));
+     sendIntent.setType("text/plain");
+     startActivity(Intent.createChooser(sendIntent, getString(R.string.share_with)));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

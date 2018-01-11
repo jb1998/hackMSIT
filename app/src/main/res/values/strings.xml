@@ -4,7 +4,8 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
+    <string name="share_message">https://play.google.com/store/apps/details?id=com.jatin.remind_it</string>
+    <string name="share_with">share_with</string>
     <string name="action_settings">Settings</string>
 
     <!-- TODO: Remove or change this placeholder text -->
